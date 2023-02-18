@@ -5,12 +5,24 @@
 Console.WriteLine("Ведите число N:");
 int n = int.Parse(Console.ReadLine()!);
 int index = 1;
+int index_ort = 0;
 int a = 0;
 Console.WriteLine($"кубы числе от 1 до {n}:");
-while (index <= n)
+if (n > 0)
+{while (index <= n)
 {
     a = index * index * index;
     Console.WriteLine(a);
     index = index + 1;
 }
-
+}
+if (n < 0)
+{
+    index_ort = n;
+    while (index_ort <= -1)
+{
+    a = index_ort * index_ort * index_ort;
+    Console.WriteLine(a);
+    index_ort = index_ort + 1;
+}
+}
